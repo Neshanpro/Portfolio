@@ -3,6 +3,7 @@ import FeatureCards from "./sections/FeatureCards.jsx"
 import Hero from "./sections/Hero.jsx"
 import ShowcaseSection from "./sections/ShowcaseSection.jsx"
 import ExperienceAndCert from "./sections/ExperienceAndCert.jsx"
+import TechStack from "./sections/TechStack.jsx"
 
 const App = () => {
     return (
@@ -12,6 +13,7 @@ const App = () => {
             <ShowcaseSection />
             <FeatureCards />
             <ExperienceAndCert />
+            <TechStack />
             {/* <Contact /> */}
         </>
     )
