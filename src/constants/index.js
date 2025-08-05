@@ -1,7 +1,7 @@
 const navLinks = [
   {
-    name: "Work",
-    link: "#work",
+    name: "Projects",
+    link: "#projects",
   },
   {
     name: "Experience",
@@ -12,8 +12,8 @@ const navLinks = [
     link: "#skills",
   },
   {
-    name: "Testimonials",
-    link: "#testimonials",
+    name: "Certifications",
+    link: "#Certifications",
   },
 ];
 
@@ -29,10 +29,10 @@ const words = [
 ];
 
 const counterItems = [
-  { value: 15, suffix: "+", label: "Years of Experience" },
-  { value: 200, suffix: "+", label: "Satisfied Clients" },
-  { value: 108, suffix: "+", label: "Completed Projects" },
-  { value: 90, suffix: "%", label: "Client Retention Rate" },
+  { value: 17, suffix: " ", label: "Tech Courses Completed" },
+  { value: 3, suffix: " ", label: "Frontend Projects Built" },
+  { value: 2, suffix: " ", label: "Cloud Platforms Explored (AWS, Azure)" },
+  { value: 100, suffix: "% ", label: "Commitment to Learning" },
 ];
 
 const logoIconsList = [
@@ -74,18 +74,18 @@ const logoIconsList = [
 const abilities = [
   {
     imgPath: "/images/seo.png",
-    title: "Quality Focus",
-    desc: "Delivering high-quality results while maintaining attention to every detail.",
-  },
-  {
-    imgPath: "/images/chat.png",
-    title: "Reliable Communication",
-    desc: "Keeping you updated at every step to ensure transparency and clarity.",
+    title: "Project-Based Learning",
+    desc: "Built responsive apps using React, JavaScript, and APIs to turn theory into working solutions.",
   },
   {
     imgPath: "/images/time.png",
-    title: "On-Time Delivery",
-    desc: "Making sure projects are completed on schedule, with quality & attention to detail.",
+    title: "Quick Learner",
+    desc: "Transitioned from marketing to cloud/web dev by self-learning, certifications, and real-world practice.",
+  },
+  {
+    imgPath: "/images/chat.png",
+    title: "Cloud & DevOps Ready",
+    desc: "Familiar with AWS, Azure basics, CI/CD concepts, and version control using GitHub.",
   },
 ];
 
