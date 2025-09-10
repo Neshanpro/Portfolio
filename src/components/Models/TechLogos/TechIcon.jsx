@@ -2,7 +2,7 @@ import { OrbitControls, useGLTF } from "@react-three/drei"
 import { Canvas } from "@react-three/fiber"
 import { Float } from "@react-three/drei"
 import { Environment } from "@react-three/drei"
-import { useEffect } from "react"
+import { useEffect, Suspense } from "react"
 import * as THREE from "three"
 
 
@@ -10,14 +10,22 @@ const TechIcon = ({ model }) => {
     const scene = useGLTF(model.modelPath)
 
     useEffect(() => {
-        if (model.name === "Interactive Developer") {
+        if (model.name === "Interactive Developer" && scene?.scene) {
             scene.scene.traverse((child) => {
-                if (child.isMesh && child.name === "object_5") {
-                    child.material = new THREE.MeshStandardMaterial({ color: 'red' })
+                if (child.isMesh) {
+                    const mats = Array.isArray(child.material) ? child.material : [child.material]
+                    mats.forEach((mat) => {
+                        if (!mat) return
+                        // Remove textures so the color shows purely
+                        if (mat.map) mat.map = null
+                        if (mat.emissiveMap) mat.emissiveMap = null
+                        mat.color?.set('#ffffff')
+                        mat.needsUpdate = true
+                    })
                 }
             })
         }
-    }, [scene])
+    }, [scene, model.name])
 
     return (
         <Canvas>
@@ -28,13 +36,13 @@ const TechIcon = ({ model }) => {
 
             <OrbitControls enableZoom={false} />
 
-            <Float speed={5.5} rotationIntensity={0.5} floatIntensity={0.9}>
-                <group scale={model.scale} rotaion={model.rotation}>
-                    <primitive
-                        object={scene.scene}
-                    />
-                </group>
-            </Float>
+            <Suspense fallback={null}>
+                <Float speed={5.5} rotationIntensity={0.5} floatIntensity={0.9}>
+                    <group scale={model.scale} rotation={model.rotation}>
+                        <primitive object={scene.scene} />
+                    </group>
+                </Float>
+            </Suspense>
         </Canvas>
     )
 }

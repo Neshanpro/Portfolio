@@ -1,4 +1,3 @@
-import { div } from "three/tsl";
 import { abilities } from "../constants/index.js";
 
 const FeatureCards = () => {

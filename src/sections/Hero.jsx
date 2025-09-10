@@ -1,4 +1,3 @@
-import { use } from "react";
 import Button from "../components/Button.jsx";
 import HeroExperience from "../components/HeroModels/HeroExperience.jsx";
 import { words } from "../constants/index.js";
@@ -49,7 +48,7 @@ const Hero = () => {
                             <h1>into Real Projects</h1>
                             <h1>that Deliver Results</h1>
                         </div>
-                        <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
+                        <p className="text-white-50 md:text-xl relative z-20 pointer-events-none xl:max-w-lg max-w-full">
                             Hi, I'm Neshan — a Full-Stack Developer passionate about building scalable web applications and cloud-native solutions that blend creativity with performance!
                         </p>
                         <Button

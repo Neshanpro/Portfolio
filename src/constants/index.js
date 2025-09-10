@@ -10,11 +10,7 @@ const navLinks = [
   {
     name: "Skills",
     link: "#skills",
-  },
-  {
-    name: "Certifications",
-    link: "#Certifications",
-  },
+  }
 ];
 
 const words = [
@@ -35,42 +31,6 @@ const counterItems = [
   { value: 100, suffix: "% ", label: "Commitment to Learning" },
 ];
 
-const logoIconsList = [
-  {
-    imgPath: "/images/logos/company-logo-1.png",
-  },
-  {
-    imgPath: "/images/logos/company-logo-2.png",
-  },
-  {
-    imgPath: "/images/logos/company-logo-3.png",
-  },
-  {
-    imgPath: "/images/logos/company-logo-4.png",
-  },
-  {
-    imgPath: "/images/logos/company-logo-5.png",
-  },
-  {
-    imgPath: "/images/logos/company-logo-6.png",
-  },
-  {
-    imgPath: "/images/logos/company-logo-7.png",
-  },
-  {
-    imgPath: "/images/logos/company-logo-8.png",
-  },
-  {
-    imgPath: "/images/logos/company-logo-9.png",
-  },
-  {
-    imgPath: "/images/logos/company-logo-10.png",
-  },
-  {
-    imgPath: "/images/logos/company-logo-11.png",
-  },
-];
-
 const abilities = [
   {
     imgPath: "/images/seo.png",
@@ -83,7 +43,7 @@ const abilities = [
     desc: "Transitioned from marketing to cloud/web dev by self-learning, certifications, and real-world practice.",
   },
   {
-    imgPath: "/images/chat.png",
+    imgPath: "/images/cloud.png",
     title: "Cloud & DevOps Ready",
     desc: "Familiar with AWS, Azure basics, CI/CD concepts, and version control using GitHub.",
   },
@@ -147,130 +107,92 @@ const techStackIcons = [
 
 const expCards = [
   {
-    review: "Adrian brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.",
-    imgPath: "/images/exp1.png",
-    logoPath: "/images/logo1.png",
-    title: "Frontend Developer",
-    date: "January 2023 - Present",
+    review: "Being part of the RWS vendor network has introduced me to professional skill assessments and project invitation processes. I’ve learned how large-scale AI data and localization projects are structured and managed.",
+    logoPath: "/images/rws-group.svg",
+    title: "Data Service Specialist (Vendor Network)",
+    date: "Feb 2025 – Present",
     responsibilities: [
-      "Developed and maintained user-facing features for the Hostinger website.",
-      "Collaborated closely with UI/UX designers to ensure seamless user experiences.",
-      "Optimized web applications for maximum speed and scalability.",
+      "Joined RWS vendor network as a freelance Data Service Specialist.",
+      "Participated in project invitations aligned with language and data expertise.",
+      "Completed skill assessments in language and data-related tasks."
     ],
   },
   {
-    review: "Adrian’s contributions to Docker's web applications have been outstanding. He approaches challenges with a problem-solving mindset.",
-    imgPath: "/images/exp2.png",
-    logoPath: "/images/logo2.png",
-    title: "Full Stack Developer",
-    date: "June 2020 - December 2023",
+    review: "The Associate Data Analyst in SQL course enhanced my ability to analyze and query data. I learned how to structure efficient queries, manipulate large datasets, and apply SQL to real-world business scenarios.",
+    logoPath: "/images/datacamp.svg",
+    title: "Associate Data Analyst in SQL",
+    date: "Issued by DataCamp",
     responsibilities: [
-      "Led the development of Docker's web applications, focusing on scalability.",
-      "Worked with backend engineers to integrate APIs seamlessly with the frontend.",
-      "Contributed to open-source projects that were used with the Docker ecosystem.",
+      "Developed skills in writing SQL queries for data extraction and analysis.",
+      "Learned to manage, join, and transform relational datasets.",
+      "Gained practical insights into applying SQL for analytics tasks."
     ],
   },
   {
-    review: "Adrian’s work on Appwrite’s mobile app brought a high level of quality and efficiency. He delivered solutions that enhanced our mobile experience & meet our product goals.",
-    imgPath: "/images/exp3.png",
-    logoPath: "/images/logo3.png",
-    title: "React Native Developer",
-    date: "March 2019 - May 2020",
+    review: "The AWS Cloud Practitioner certification gave me foundational knowledge of cloud concepts, AWS services, and cloud security. I learned how to apply cloud technologies to solve business challenges and gained confidence in cloud computing fundamentals.",
+    logoPath: "/images/datacamp.svg",
+    title: "AWS Cloud Practitioner",
+    date: "Issued by DataCamp",
     responsibilities: [
-      "Built cross-platform mobile apps using React Native, integrating with Appwrite's backend services.",
-      "Improved app performance and user experience through code optimization and testing.",
-      "Coordinated with the product team to implement features based on feedback.",
+      "Understood AWS global infrastructure and core cloud concepts.",
+      "Explored cloud security, compliance, and cost management principles.",
+      "Applied cloud computing fundamentals to practical business use cases."
+    ],
+  },
+  {
+    review: "Through the Advanced React certification, I deepened my knowledge of React hooks, context API, and performance optimization. I learned how to design more efficient, scalable, and maintainable React applications.",
+    logoPath: "/images/meta.png",
+    title: "Advanced React",
+    date: "Issued by Meta",
+    responsibilities: [
+      "Mastered advanced state management using hooks and context.",
+      "Improved application performance with best practices and optimization.",
+      "Learned techniques to build scalable, maintainable React apps."
+    ],
+  },
+  {
+    review: "Completing the Full-Stack Web Development with React specialization helped me gain hands-on experience in building modern web applications. I learned to use React, Node.js, and REST APIs effectively, improving my frontend and backend development skills.",
+    logoPath: "/images/full-stack.png",
+    title: "Full-Stack Web Development with React",
+    date: "Issued by The Hong Kong University of Science and Technology (Coursera)",
+    responsibilities: [
+      "Built reusable components and applied advanced React concepts.",
+      "Integrated Node.js and backend services with frontend applications.",
+      "Strengthened understanding of full-stack development workflows."
     ],
   },
 ];
 
-const expLogos = [
-  {
-    name: "logo1",
-    imgPath: "/images/logo1.png",
-  },
-  {
-    name: "logo2",
-    imgPath: "/images/logo2.png",
-  },
-  {
-    name: "logo3",
-    imgPath: "/images/logo3.png",
-  },
-];
 
-const testimonials = [
-  {
-    name: "Esther Howard",
-    mentions: "@estherhoward",
-    review:
-      "I can’t say enough good things about Adrian. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.",
-    imgPath: "/images/client1.png",
-  },
-  {
-    name: "Wade Warren",
-    mentions: "@wadewarren",
-    review:
-      "Working with Adrian was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web dev projects.",
-    imgPath: "/images/client3.png",
-  },
-  {
-    name: "Guy Hawkins",
-    mentions: "@guyhawkins",
-    review:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    imgPath: "/images/client2.png",
-  },
-  {
-    name: "Marvin McKinney",
-    mentions: "@marvinmckinney",
-    review:
-      "Adrian was a pleasure to work with. He turned our outdated website into a fresh, intuitive platform that’s both modern and easy to navigate. Fantastic work overall.",
-    imgPath: "/images/client5.png",
-  },
-  {
-    name: "Floyd Miles",
-    mentions: "@floydmiles",
-    review:
-      "Adrian’s expertise in web development is truly impressive. He delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch. He’s a true professional!",
-    imgPath: "/images/client4.png",
-  },
-  {
-    name: "Albert Flores",
-    mentions: "@albertflores",
-    review:
-      "Adrian was a pleasure to work with. He understood our requirements perfectly and delivered a website that exceeded our expectations. His skills in both frontend and backend dev are top-notch.",
-    imgPath: "/images/client6.png",
-  },
-];
 
 const socialImgs = [
   {
     name: "insta",
     imgPath: "/images/insta.png",
+    imgLink: "https://www.instagram.com/parvej.neshan/",
   },
   {
     name: "fb",
     imgPath: "/images/fb.png",
+    imgLink: "https://www.facebook.com/parvej.neshan",
   },
   {
     name: "x",
     imgPath: "/images/x.png",
+    imgLink: "https://x.com/NeshanParvej",
   },
   {
     name: "linkedin",
     imgPath: "/images/linkedin.png",
+    imgLink: "https://www.linkedin.com/in/neshan-parvej/",
   },
 ];
 
 export {
   words,
   abilities,
-  logoIconsList,
   counterItems,
   expCards,
-  expLogos,
-  testimonials,
   socialImgs,
   techStackIcons,
   techStackImgs,
