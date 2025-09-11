@@ -3,7 +3,6 @@ import { Canvas } from "@react-three/fiber"
 import { Float } from "@react-three/drei"
 import { Environment } from "@react-three/drei"
 import { useEffect, Suspense } from "react"
-import * as THREE from "three"
 
 
 const TechIcon = ({ model }) => {
