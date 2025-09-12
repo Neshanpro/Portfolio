@@ -13,7 +13,31 @@ body {
   color: white;
   scroll-behavior: smooth;
   font-family: "Mona Sans", sans-serif;
-  font-size: 16px;
+  font-size: 18px; /* Base font size increased from default 16px */
+  /* Mobile optimization */
+  -webkit-overflow-scrolling: touch;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Mobile touch optimization */
+@media (max-width: 768px) {
+  html, body {
+    font-size: 16px; /* Smaller base font on mobile */
+    touch-action: pan-y; /* Allow vertical scrolling only */
+  }
+  
+  /* Prevent 3D canvas from interfering with scroll */
+  canvas {
+    touch-action: none;
+    pointer-events: auto;
+  }
+  
+  /* Make 3D containers non-interactive on mobile */
+  .hero-3d-layout canvas,
+  .tech-icon-wrapper canvas {
+    pointer-events: none;
+  }
 }
 
 section {

@@ -4,7 +4,6 @@ import { Float } from "@react-three/drei"
 import { Environment } from "@react-three/drei"
 import { useEffect, Suspense } from "react"
 
-
 const TechIcon = ({ model }) => {
     const scene = useGLTF(model.modelPath)
 
@@ -27,16 +26,28 @@ const TechIcon = ({ model }) => {
     }, [scene, model.name])
 
     return (
-        <Canvas>
+        <Canvas
+            performance={{ min: 0.5 }}
+            dpr={[1, 2]} // Limit device pixel ratio for performance
+            gl={{ 
+                antialias: false, // Disable for mobile performance
+                powerPreference: "low-power" // Optimize for battery life
+            }}
+        >
             <ambientLight intensity={0.3} />
             <directionalLight position={[5, 5, 5]} intensity={1} />
 
             <Environment preset="city" />
 
-            <OrbitControls enableZoom={false} />
+            <OrbitControls 
+                enableZoom={false} 
+                enablePan={false} // Disable panning to prevent scroll interference
+                enableRotate={false} // Disable rotation on mobile to prevent scroll issues
+                touchAction="none" // Prevent touch conflicts
+            />
 
             <Suspense fallback={null}>
-                <Float speed={5.5} rotationIntensity={0.5} floatIntensity={0.9}>
+                <Float speed={3} rotationIntensity={0.3} floatIntensity={0.5}>
                     <group scale={model.scale} rotation={model.rotation}>
                         <primitive object={scene.scene} />
                     </group>
