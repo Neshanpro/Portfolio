@@ -5,16 +5,21 @@ import Computer from "./Computer";
 
 const ContactExperience = () => {
     const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
-    
+
     return (
-        <Canvas 
+        <Canvas
             shadows={!isMobile} // Disable shadows on mobile for performance
             camera={{ position: [0, 3, 7], fov: 45 }}
             performance={{ min: 0.5 }}
             dpr={isMobile ? [1, 1.5] : [1, 2]}
-            gl={{ 
+            gl={{
                 antialias: !isMobile,
                 powerPreference: isMobile ? "low-power" : "high-performance"
+            }}
+            style={{
+                // Disable pointer events on mobile to allow scrolling
+                pointerEvents: isMobile ? 'none' : 'auto',
+                touchAction: isMobile ? 'none' : 'auto'
             }}
         >
             <ambientLight intensity={0.5} color="#fff4e6" />

@@ -13,31 +13,66 @@ body {
   color: white;
   scroll-behavior: smooth;
   font-family: "Mona Sans", sans-serif;
-  font-size: 18px; /* Base font size increased from default 16px */
+  font-size: 16px; /* Base font size increased from default 16px */
   /* Mobile optimization */
   -webkit-overflow-scrolling: touch;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Mobile touch optimization */
+/* Mobile scroll optimizations */
 @media (max-width: 768px) {
-  html, body {
-    font-size: 16px; /* Smaller base font on mobile */
-    touch-action: pan-y; /* Allow vertical scrolling only */
+  body {
+    font-size: 16px;
+    /* Improve touch scrolling */
+    -webkit-overflow-scrolling: touch;
+    overflow-x: hidden;
   }
   
   /* Prevent 3D canvas from interfering with scroll */
   canvas {
-    touch-action: none;
-    pointer-events: auto;
+    pointer-events: none !important;
+    touch-action: none !important;
   }
   
-  /* Make 3D containers non-interactive on mobile */
-  .hero-3d-layout canvas,
-  .tech-icon-wrapper canvas {
-    pointer-events: none;
+  /* Allow scroll on main content */
+  #root {
+    touch-action: pan-y !important;
+    -webkit-overflow-scrolling: touch;
   }
+  
+  /* Ensure sections don't interfere with scroll */
+  section {
+    touch-action: pan-y !important;
+  }
+  
+  /* Hero section mobile scroll fix */
+  #hero canvas {
+    pointer-events: none !important;
+    touch-action: none !important;
+  }
+  
+  /* Contact section mobile scroll fix */
+  #contact canvas {
+    pointer-events: none !important;
+    touch-action: none !important;
+  }
+  
+  /* Fix any scroll blocking elements */
+  .orbit-controls {
+    pointer-events: none !important;
+  }
+}
+
+/* Ensure proper scroll behavior */
+html {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+body {
+  font-size: 18px;
+  overflow-x: hidden;
 }
 
 section {

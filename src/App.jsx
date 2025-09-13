@@ -23,23 +23,23 @@ const App = () => {
             <NavBar />
             <Hero />
             <FeatureCards />
-            
+
             <Suspense fallback={<LoadingSpinner />}>
                 <ComingSoon />
             </Suspense>
-            
+
             <Suspense fallback={<LoadingSpinner />}>
                 <ExperienceAndCert />
             </Suspense>
-            
+
             <Suspense fallback={<LoadingSpinner />}>
                 <TechStack />
             </Suspense>
-            
+
             <Suspense fallback={<LoadingSpinner />}>
                 <Contact />
             </Suspense>
-            
+
             <Suspense fallback={<LoadingSpinner />}>
                 <Footer />
             </Suspense>

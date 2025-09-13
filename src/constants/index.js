@@ -74,40 +74,45 @@ const techStackImgs = [
 
 const techStackIcons = [
   {
-    name: "React Developer",
+    name: "React",
     modelPath: "/models/react_logo-transformed.glb",
-    scale: 1,
-    rotation: [0, 0, 0],
-  },
-  {
-    name: "Python Developer",
-    modelPath: "/models/python-transformed.glb",
+    fallbackIcon: "/images/logos/react.png",
     scale: 0.8,
-    rotation: [0, 0, 0],
+    rotation: [0, Math.PI / 4, 0]
   },
   {
-    name: "Backend Developer",
+    name: "Python",
+    modelPath: "/models/python-transformed.glb",
+    fallbackIcon: "/images/logos/python.svg",
+    scale: 1,
+    rotation: [0, 0, 0]
+  },
+  {
+    name: "Node.js",
     modelPath: "/models/node-transformed.glb",
-    scale: 5,
-    rotation: [0, -Math.PI / 2, 0],
+    fallbackIcon: "/images/logos/node.png",
+    scale: 4.5,
+    rotation: [0, -Math.PI / 6, 0]
   },
   {
-    name: "Interactive Developer",
+    name: "Three.js",
     modelPath: "/models/three.js-transformed.glb",
-    scale: 0.05,
-    rotation: [0, 0, 0],
+    fallbackIcon: "/images/logos/three.png",
+    scale: 0.04,
+    rotation: [0, Math.PI / 3, 0]
   },
   {
-    name: "Project Manager",
+    name: "Git",
     modelPath: "/models/git-svg-transformed.glb",
-    scale: 0.05,
-    rotation: [0, -Math.PI / 4, 0],
-  },
+    fallbackIcon: "/images/logos/git.svg",
+    scale: 0.04,
+    rotation: [0, 0, 0]
+  }
 ];
 
 const expCards = [
   {
-    review: "Being part of the RWS vendor network has introduced me to professional skill assessments and project invitation processes. I’ve learned how large-scale AI data and localization projects are structured and managed.",
+    review: "Being part of the RWS vendor network has introduced me to professional skill assessments and project invitation processes. I've learned how large-scale AI data and localization projects are structured and managed.",
     logoPath: "/images/rws-group.svg",
     title: "Data Service Specialist (Vendor Network)",
     date: "Feb 2025 – Present",
@@ -162,8 +167,6 @@ const expCards = [
     ],
   },
 ];
-
-
 
 const socialImgs = [
   {

@@ -1,54 +1,54 @@
-import { useGSAP } from "@gsap/react"
-import TechIcon from "../components/Models/TechLogos/TechIcon"
 import TitleHeader from "../components/TitleHeader"
 import { techStackIcons } from "../constants"
-import { gsap } from "gsap"
+import TechIcon from "../components/Models/TechLogos/TechIcon"
 import { useMediaQuery } from "react-responsive"
 
 const TechStack = () => {
-    const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
-
-    useGSAP(() => {
-        gsap.fromTo(".tech-card", { y: 50, opacity: 0 }, {
-            y: 0, opacity: 1, duration: 1, stagger: 0.2, ease: "power2.inOut",
-            scrollTrigger: {
-                trigger: "#skills",
-                start: "top center",
-            }
-        })
-    })
+    const isMobile = useMediaQuery({ query: '(max-width: 768px)' })
 
     return (
-        <div id="skills" className="flex-center section-padding">
-            <div className="w-full h-full md:px-10 px-5">
-                <TitleHeader title="My Preferred Tech Stack" sub="The Skills I Bring To The Table" />
-
-                <div className="tech-grid">
-                    {techStackIcons.map((icon) => (
-                        <div key={icon.name} className="card-border tech-card overflow-hidden group xl:rounded-full rounded-lg">
-                            <div className="tech-card-animated-bg" />
-                            <div className="tech-card-content">
-                                <div className={`tech-icon-wrapper ${isMobile ? 'pointer-events-none' : ''}`}>
-                                    {!isMobile ? (
-                                        <TechIcon model={icon} />
-                                    ) : (
-                                        // Static image for mobile to improve performance
-                                        <div className="w-32 h-32 flex items-center justify-center bg-gradient-to-br from-blue-400 to-purple-600 rounded-lg">
-                                            <span className="text-2xl font-bold text-white">
-                                                {icon.name.split(' ')[0]}
-                                            </span>
-                                        </div>
-                                    )}
+        <section id="tech-stack" className="w-full md:mt-40 mt-20 section-padding">
+            <div className="w-full h-full md:px-20 px-5">
+                <TitleHeader
+                    title="Tech Stack"
+                    sub="The Skills I Bring To The Table"
+                />
+                <div className="mt-20">
+                    {isMobile ? (
+                        // Mobile: Static cards with icons
+                        <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
+                            {techStackIcons.map((tech, index) => (
+                                <div
+                                    key={tech.name}
+                                    className="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-lg border border-gray-700 hover:border-gray-600 transition-colors"
+                                >
+                                    <div className="flex flex-col items-center text-center">
+                                        <img
+                                            src={tech.fallbackIcon}
+                                            alt={tech.name}
+                                            className="w-12 h-12 mb-3"
+                                        />
+                                        <h3 className="text-white font-medium text-sm">{tech.name}</h3>
+                                    </div>
                                 </div>
-                                <div className="padding-x w-full">
-                                    <p>{icon.name}</p>
-                                </div>
-                            </div>
+                            ))}
                         </div>
-                    ))}
+                    ) : (
+                        // Desktop: Interactive 3D models
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
+                            {techStackIcons.map((tech, index) => (
+                                <div key={tech.name} className="flex flex-col items-center">
+                                    <div className="w-48 h-48 mb-4">
+                                        <TechIcon model={tech} />
+                                    </div>
+                                    <h3 className="text-white text-lg font-medium text-center">{tech.name}</h3>
+                                </div>
+                            ))}
+                        </div>
+                    )}
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 
