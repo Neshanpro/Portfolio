@@ -8,7 +8,7 @@ const TechStack = () => {
 
     return (
         <section id="tech-stack" className="w-full md:mt-40 mt-20 section-padding">
-            <div className="w-full h-full md:px-20 px-5">
+            <div className="w-full h-full md:px-20 px-5" id="skills">
                 <TitleHeader
                     title="Tech Stack"
                     sub="The Skills I Bring To The Table"
