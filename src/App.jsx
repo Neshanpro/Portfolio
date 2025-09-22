@@ -3,6 +3,7 @@ import NavBar from "./components/NavBar.jsx"
 import FeatureCards from "./sections/FeatureCards.jsx"
 import Hero from "./sections/Hero.jsx"
 import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 // Lazy load heavy components
 const ComingSoon = lazy(() => import("./sections/ComingSoon.jsx"))
@@ -46,6 +47,7 @@ const App = () => {
             </Suspense>
 
             <Analytics />
+            <SpeedInsights />
         </>
     )
 }
